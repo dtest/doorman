@@ -13,7 +13,7 @@ var Proxy = require('./lib/proxy');
 var tls = require('./middlewares/tls');
 log = require('./lib/log');
 
-var proxy = new Proxy(conf.proxyTo.host, conf.proxyTo.port);
+var proxy = new Proxy(conf.proxyTo.host, conf.proxyTo.port, conf.proxyTo.toProxy);
 var proxyMiddleware = proxy.middleware();
 
 // Set up our auth strategies
